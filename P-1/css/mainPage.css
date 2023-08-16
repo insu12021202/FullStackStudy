@@ -14,12 +14,21 @@ body {
   box-shadow: 1px 1px 5px 1px;
 }
 
+.hamburger-click {
+  display: inline-block;
+  height: 528px;
+  width: 178px;
+  background: #cfdaff;
+  flex-shrink: 0;
+  position: fixed;
+  top: 60px;
+}
+
 header {
   display: flex;
   align-items: center;
   width: 501px;
   height: 60px;
-  border: 1px solid #000;
   background: #045d8b;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -63,6 +72,14 @@ header {
   height: 21px;
   justify-content: center;
 }
+.header-login img {
+  margin-left: 18px;
+  margin-right: 18px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: none;
+}
 .header-login a {
   text-decoration: none;
   color: white;
@@ -72,6 +89,32 @@ header {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.hamburger-click {
+  display: inline-block;
+  height: 528px;
+  width: 178px;
+  background: #cfdaff;
+  flex-shrink: 0;
+  position: fixed;
+  top: 60px;
+}
+
+.hamburger-click ul {
+  margin: 0;
+}
+.hamburger-click li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  height: 50px;
+  width: 105px;
+  border-bottom: 1px solid #045d8b;
+}
+.hamburger-click li a {
+  text-decoration: none;
+  color: black;
 }
 aside {
   display: flex;

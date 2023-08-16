@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SummerStudy P-1</title>
+    <link rel="stylesheet" href="/P-1/css/writing.css" />
+  </head>
+  <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"
+></script>
+  <body>
+    <div class="bodycon">
+      <!-- header -->
+      <header>
+        <div class="header-hamburgerBtnBox">
+          <button class="header-hamburgerBtn">
+            <img src="/P-1/img/Icon.png" alt="" />
+          </button>
+        </div>
+        <a href="#" class="header-main">준형 메모</a>
+        <div class="header-login">
+          <a href="">Log In</a>
+          <!-- 로그인 시 -->
+          <img src="/P-1/img/afterLoginIcon.png" alt="" />
+        </div>
+      </header>
+      <!-- header -->
+      <main>
+        <div class="main-box">
+          <!-- 글 상세페이지 -->
+          <div class="readingBox-header">
+            <div class="readingBox-boardName">자유게시판</div>
+            <div class="readingBox-boardWriter">박준형</div>
+          </div>
+          <div class="writing-boardSelector">게시판을 입력해 주세요</div>
+          <div class="readingBox-content">
+            
+          </div>
+          <!-- 메인페이지 -->
+          <!-- <div class="writing-title">제목을 입력해 주세요</div>
+          <div class="writing-content">내용</div> -->
+        </div>
+      </main>
+      <footer>
+          <button class="writing-btn">글쓰기</button>
+          <!-- 수정하기 -->
+          <button class="modifying-btn">수정</button>
+          <!-- 삭제 -->
+          <button class="deleting-btn" id="deleteBtn">삭제</button>
+      </footer>
+      <section class="popup-wrap" id="popup">
+        <div class="popup">
+          <div class="popup-head">삭제하시겠습니까?</div>
+          <div class="popup-btnBox">
+            <div class="popup-cancelBtn" id="cancleBtn">취소</div>
+            <div class="popup-deleteBtn">삭제</divc>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+    $(function(){
+  $("#deleteBtn").click(function(){        
+      $("#popup").css('display','flex').hide().fadeIn();
+      //팝업을 flex속성으로 바꿔준 후 hide()로 숨기고 다시 fadeIn()으로 효과
+  });
+  $("#cancleBtn").click(function(){
+      modalClose(); //모달 닫기 함수 호출
+  });
+  function modalClose(){
+      $("#popup").fadeOut(); //페이드아웃 효과
+  }
+});
+    </script>
+  </body>
+</html>
