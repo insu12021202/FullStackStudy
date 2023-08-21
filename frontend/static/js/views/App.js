@@ -9,7 +9,7 @@ class App {
         this.$body = $body;
         this.render();
     }
-    render() {
+    async render() {
         // header
         const header = new Header(this.$body);
         header.render();
@@ -25,7 +25,7 @@ class App {
         const notFoundPage = new NotFoundPage(main);
         const renderPage = (pathname) => {
             // init main
-            main.firstChild?.remove();
+            main.innerHTML = "";
             // switch page rendering
             switch (pathname) {
                 case "/":

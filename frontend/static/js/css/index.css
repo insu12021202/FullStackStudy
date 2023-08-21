@@ -50,6 +50,11 @@ header {
     width: 80%;
     margin: 10px auto;
     padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
 }
 
 .card {
@@ -61,6 +66,9 @@ header {
     transform-origin: center right;
     transition: transform 1s;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    height: 260px;
+    cursor: pointer;
 }
 
 .card.is-flipped {
@@ -68,21 +76,27 @@ header {
 }
 
 .card_plane {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     border-radius: 25px;
     text-align: center;
-    font-weight: 500;
-    font-size: 20px;
-    color: black;
     backface-visibility: hidden;
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
 }
 
 .card_plane--front {
-    background: #f2f2f2;
+    background: #0d0d0d;
 }
 
 .card_plane--back {
+    background: #f2f2f2;
+    color: #3098f2;
     transform: rotateY(180deg);
 }
 

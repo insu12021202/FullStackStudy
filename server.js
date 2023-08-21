@@ -1,5 +1,6 @@
 // import express module
 const express = require("express");
+const bodyParser = require("body-parser");
 const path = require("path");
 const mysql = require("mysql");
 
@@ -23,6 +24,8 @@ connection.connect((err) => {
     console.log("DB connected");
 });
 
+app.use(bodyParser.json());
+
 // assign static folder
 app.use(
     "/static",
@@ -35,7 +38,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/getUserList", (req, res) => {
-    res.send("ssssss");
+    console.log(req.body);
+    const sql = `SELECT * FROM user`;
+    connection.query(sql, (err, result) => {
+        if (err) throw err;
+        res.send(result);
+    });
 });
 
 // 404 error handling

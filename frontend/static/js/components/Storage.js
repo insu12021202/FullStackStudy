@@ -1,6 +1,5 @@
-export const setPersonalInfo = async () => {
-    // const response = await fetch("/getUserList");
-    axios.get("/api/getUserList", null).then((res) => {
-        console.log(res.data);
-    });
+export const setPersonalInfo = async (page) => {
+    const response = await axios.get("/api/getUserList", page);
+
+    return response.data;
 };
