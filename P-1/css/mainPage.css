@@ -10,20 +10,25 @@ body {
 }
 .bodycon {
   width: 501px;
-  height: 588px;
+  height: 624px;
   box-shadow: 1px 1px 5px 1px;
 }
-
-.hamburger-click {
-  display: inline-block;
-  height: 528px;
-  width: 178px;
-  background: #cfdaff;
-  flex-shrink: 0;
-  position: fixed;
-  top: 60px;
+header,
+aside,
+main,
+footer,
+section {
+  position: relative;
 }
-
+header,
+aside,
+main,
+footer {
+  z-index: -1;
+}
+section {
+  z-index: 1;
+}
 header {
   display: flex;
   align-items: center;
@@ -96,7 +101,7 @@ header {
   width: 178px;
   background: #cfdaff;
   flex-shrink: 0;
-  position: fixed;
+  /* position: fixed; */
   top: 60px;
 }
 
