@@ -1,5 +1,7 @@
 // import { setPersonalInfo } from '../components/Storage.js';
 import Header from './Header.js';
+import Mainpage from './MainPage.js';
+import LoginPage from './LoginPage.js';
 // import HomePage from './HomePage.js';
 // import SignupPage from './SignupPage.js';
 // import NotFoundPage from './NotFound.js';
@@ -17,26 +19,36 @@ class App {
 
     // main
     const main = document.createElement('main');
-    main.setAttribute('id', 'page_content');
+    main.setAttribute('class', 'page_content');
     this.$body.appendChild(main);
 
     // render page
-    const homePage = new HomePage(main);
-    const signupPage = new SignupPage(main);
-    const notFoundPage = new NotFoundPage(main);
+    const mainpage = new Mainpage(main);
+    mainpage.render();
+
+    const loginPage = new LoginPage(main);
+    loginPage.render();
+
+    // const signupPage = new SignupPage(main);
+    // const notFoundPage = new NotFoundPage(main);
+
     const renderPage = (pathname) => {
-      //   // init main
-      //   main.firstChild?.remove();
+      // // init main
+
+      while (main.firstChild) {
+        main.firstChild.remove();
+      }
+
       // switch page rendering
       switch (pathname) {
         case '/':
-          homePage.render();
+          mainpage.render();
           break;
-        case '/signup':
-          signupPage.render();
+        case '/login':
+          loginPage.render();
           break;
         default:
-          notFoundPage.render();
+          mainpage.render();
       }
     };
 

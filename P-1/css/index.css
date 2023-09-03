@@ -10,6 +10,9 @@ body {
 }
 
 .bodycon {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   width: 501px;
   height: 588px;
   box-shadow: 1px 1px 5px 1px;
@@ -17,6 +20,8 @@ body {
 
 /* GNB */
 header {
+  position: absolute;
+  bottom: 528px;
   display: flex;
   align-items: center;
   width: 501px;
@@ -73,7 +78,173 @@ header {
   line-height: normal;
   white-space: nowrap;
 }
+.hamburger-click {
+  height: 528px;
+  width: 178px;
+  background: #cfdaff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+.blind {
+  display: none;
+}
+.hamburger-click ul {
+  margin: 0;
+  margin-top: 15px;
+}
+.hamburger-click li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  height: 50px;
+  width: 105px;
+  border-bottom: 1px solid #045d8b;
+}
+.hamburger-click li button {
+  background-color: #cfdaff;
+  border: none;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.page_content {
+  width: 495px;
+  height: 528px;
+}
+.mainpageHeader {
+  display: flex;
+  flex-direction: row;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  justify-content: center;
+  margin-top: 41px;
+  margin-bottom: 24px;
+}
+.mainpageHeader > div {
+  display: flex;
+  width: 86px;
+  height: 29px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.mainpageHeaderName {
+  margin-left: 75px;
+  margin-right: 180px;
+}
+.mainpageHeaderRegiserBtn {
+  margin-right: 75px;
+  border: none;
+  background-color: white;
+  z-index: -1;
+}
 
+.mainPageListBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainPageListBox > ul {
+  border: 1px solid #045d8b;
+  border-radius: 10px;
+  width: 350px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.mainPageListBox > ul > li {
+  width: 349px;
+  border-bottom: 1px solid #045d8b;
+  flex-shrink: 0;
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  margin-top: 27px;
+  padding-bottom: 8px;
+  color: black;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.mainPageListBox > ul > li div:first-child {
+  margin-left: 15px;
+  margin-right: 44px;
+  height: 25px;
+}
+
+.mainPageListBox > ul > li button {
+  width: 153px;
+  height: 25px;
+  flex-shrink: 0;
+  margin-right: 52px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: none;
+  background-color: white;
+  height: 25px;
+}
+
+.mainPageListBox > ul > li:nth-of-type(6) {
+  border: none;
+}
+
+.mainpage__footer-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.mainpage__footer-box > ul {
+  width: 360px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  justify-content: space-between;
+  margin-left: 70px;
+  margin-right: 70px;
+  padding: 0;
+}
+
+.mainpage__footer-box > ul li {
+  list-style-type: none;
+}
+
+.mainpage__footer-box ul > li > button {
+  color: black;
+  background-color: white;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #045d8b;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 /* 인사 정보 페이지 */
 #cards_container {
   width: 80%;
