@@ -117,8 +117,8 @@ header {
 
 /* 메인페이지 부분 */
 .page_content {
-  z-index: -1;
-  position: absolute;
+  /* z-index: -1; */
+  /* position: absolute; */
   top: 60px;
   width: 495px;
   height: 528px;
@@ -262,7 +262,7 @@ header {
   align-items: center;
   flex-direction: column;
 }
-.input-id,
+.inputBox,
 .register-box,
 .login-box {
   border: 1px solid #045d8b;
@@ -275,13 +275,17 @@ header {
   font-weight: 400;
   line-height: normal;
 }
-.input-id {
+.inputBox {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 331px;
   height: 83px;
   flex-shrink: 0;
+  flex-direction: column;
+}
+.inputBox input {
+  border: none;
 }
 .twoBtnBox {
   display: flex;
