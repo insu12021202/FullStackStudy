@@ -2,8 +2,7 @@
 import Header from './Header.js';
 import Mainpage from './MainPage.js';
 import LoginPage from './LoginPage.js';
-// import HomePage from './HomePage.js';
-// import SignupPage from './SignupPage.js';
+import SignupPage from './SignupPage.js';
 // import NotFoundPage from './NotFound.js';
 
 class App {
@@ -29,14 +28,14 @@ class App {
     const loginPage = new LoginPage(main);
     loginPage.render();
 
-    // const signupPage = new SignupPage(main);
+    const signupPage = new SignupPage(main);
     // const notFoundPage = new NotFoundPage(main);
 
     const renderPage = (pathname) => {
       // // init main
 
       while (main.firstChild) {
-        main.firstChild.remove();
+        main.firstChild?.remove();
       }
 
       // switch page rendering
@@ -46,6 +45,9 @@ class App {
           break;
         case '/login':
           loginPage.render();
+          break;
+        case '/signup':
+          signupPage.render();
           break;
         default:
           mainpage.render();
