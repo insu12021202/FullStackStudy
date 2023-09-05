@@ -253,7 +253,7 @@ header {
   line-height: normal;
 }
 
-/* 로그인 페이지 */
+/* 로그인 페이지, 회원가입 페이지 */
 .login__main {
   width: 501px;
   height: 564px;
@@ -264,7 +264,9 @@ header {
 }
 .inputBox,
 .register-box,
-.login-box {
+.login-box,
+.exit-box,
+.signup-register-box {
   border: 1px solid #045d8b;
   background: #fff;
   color: #000;
@@ -293,7 +295,9 @@ header {
   margin-top: 24px;
 }
 .register-box,
-.login-box {
+.login-box,
+.exit-box,
+.signup-register-box {
   width: 158px;
   height: 47px;
   flex-shrink: 0;
@@ -304,6 +308,9 @@ header {
   align-items: center;
 }
 .register-box {
+  margin-right: 14px;
+}
+.exit-box {
   margin-right: 14px;
 }
 

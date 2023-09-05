@@ -33,8 +33,12 @@ class LoginPage {
     login_input.appendChild(password_input);
 
     //회원가입 클릭 이벤트
-    login_input.addEventListener('click', () => {
-      console.log('print!');
+    register_box.addEventListener('click', () => {
+      window.history.pushState('', '', '/signup');
+      const urlChange = new CustomEvent('urlchange', {
+        detail: { href: '/signup' },
+      });
+      document.dispatchEvent(urlChange);
     });
   }
 }
